@@ -19,7 +19,7 @@ image_split = PhotoImage(file=str(pathlib.Path().absolute()) + "\images\split.pn
 
 def main_gui():
     root_main.title('PDF-Editor')
-    root_main.geometry("468x250")
+    root_main.geometry("468x200")
     root_main.resizable(False, False)
     information_text = Label(root_main, text="Choose an option")
     information_text.pack(side=TOP)
@@ -37,8 +37,8 @@ def main_gui():
                             bg="#62809E", activebackground="#89B2DD")
     encrypt_button.pack(side=RIGHT)
     split_button = Button(root_main, command=lambda: split_gui(), height=130, width=150, image=image_split,
-                          bg="#AD4E00",
-                          activebackground="#DB6200")
+                          bg="#4c6e3a",
+                          activebackground="#79ab5f")
     split_button.pack(side=RIGHT)
     root_main.mainloop()
 
