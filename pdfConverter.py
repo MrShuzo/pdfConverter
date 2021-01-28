@@ -14,6 +14,7 @@ root_split = None
 image_merge = PhotoImage(file=str(pathlib.Path().absolute()) + "\images\merge.png")
 image_encrypt = PhotoImage(file=str(pathlib.Path().absolute()) + "\images\encrypt.png")
 image_folder = PhotoImage(file=str(pathlib.Path().absolute()) + "\images\open.png")
+image_split = PhotoImage(file=str(pathlib.Path().absolute()) + "\images\split.png")
 
 
 def main_gui():
@@ -35,8 +36,7 @@ def main_gui():
     encrypt_button = Button(root_main, command=lambda: encrypt_gui(), height=130, width=150, image=image_encrypt,
                             bg="#62809E", activebackground="#89B2DD")
     encrypt_button.pack(side=RIGHT)
-    split_button = Button(root_main, command=lambda: split_gui(), height=130, width=150, image=image_encrypt,
-                          text="Split",
+    split_button = Button(root_main, command=lambda: split_gui(), height=130, width=150, image=image_split,
                           bg="#AD4E00",
                           activebackground="#DB6200")
     split_button.pack(side=RIGHT)
@@ -122,7 +122,7 @@ def merge_pdfs(result_name):
 
         with open(result_name, 'wb') as out:
             if pdf_reader.getNumPages() != 0:
-                change_btn("Successfully merged to " + result_name + "!", "green")
+                change_btn("Successfully merged to %s !" % result_name, "green")
             else:
                 change_btn("No files selected!", "red")
             pdf_writer.write(out)
@@ -173,7 +173,7 @@ def split_pdfs(result_name, pages):
 
         with open(result_name, 'wb') as out:
             if pdf_reader.getNumPages() != 0:
-                change_btn("Successfully merged to " + result_name + "!", "green")
+                change_btn("Successfully split to %s !" % result_name, "green")
             else:
                 change_btn("No files selected!", "red")
             pdf_writer.write(out)
