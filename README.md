@@ -10,4 +10,5 @@ Just download the Windows installer from the [release](https://github.com/MrShuz
   * open folder by Martins Ratkus from the Noun Project
   * PDF File by BomSymbols from the Noun Project
   * setting by Izwar Muis from the Noun Project
+  * split by Nick Bluth from the Noun Project
 * code examples by [Algorithmen verstehen](https://www.youtube.com/channel/UCswWBF6ZkGnLG3sLRR65xRw)
